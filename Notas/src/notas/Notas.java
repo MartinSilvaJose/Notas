@@ -11,7 +11,7 @@ public class Notas {
 		System.out.print("Introduzca el valor de una calificación: ");
 		nota = reader.nextInt();
 			
-		evaluacion = califica(nota);
+		evaluacion = Califica.califica(nota);
 
 		System.out.println(evaluacion);
 		reader.close();
@@ -20,33 +20,18 @@ public class Notas {
 	/**
 	 * @param nota Un entero que introducimos en el metodo para que nos muestre el grado de evaluación.
 	 * @return Un String que nos indicara el grado de la evaluación 
-	 * @deprecated Use {@link #califica(int)} instead
+	 * @deprecated Use {@link Califica#califica(int)} instead
 	 */
 	public static String cali(int nota) {
-		return califica(nota);
+		return Califica.califica(nota);
 	}
 
 	/**
 	 * @param num_nota Un entero que introducimos en el metodo para que nos muestre el grado de evaluación.
 	 * @return Un String que nos indicara el grado de la evaluación 
+	 * @deprecated Use {@link Califica#califica(int)} instead
 	 */
 	public static String califica(int num_nota) {
-		String evaluacion;
-		if (num_nota >= 0 && num_nota < 5) {
-			evaluacion = "Suspenso";
-		}
-		else if (num_nota >= 5 && num_nota < 7) {
-			evaluacion = "Aprobado";
-		}
-		else if (num_nota >= 7 && num_nota <9) {
-			evaluacion = "Notable";
-		}
-		else if (num_nota >= 9 && num_nota <= 10) {
-			evaluacion = "Sobresaliente";
-		}
-		else {
-			evaluacion = "El valor de la calificación introducida no es correcta";
-		}
-		return evaluacion;
+		return Califica.califica(num_nota);
 	}
 }
