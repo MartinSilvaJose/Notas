@@ -1,5 +1,10 @@
 package notas;
-
+/**
+ * Clase que donde introducimos un metodo que nos relacione el numero con su resultado en String.
+ * @author José Miguel Martín Silva
+ *@version 1.0
+ *@since 20/02/2023
+ */
 public class Califica {
 
 	/**
