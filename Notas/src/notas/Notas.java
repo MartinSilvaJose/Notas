@@ -4,25 +4,30 @@ import java.util.Scanner;
 
 public class Notas {
 
-public static void main(String[] args) {
-Scanner reader = new Scanner(System.in);// Para pedir un dato numérico por teclado
-int n = 0;
-String c = "";
-System.out.print("Introduzca el valor de una calificación: ");
-n = reader.nextInt();
+	public static void main(String[] args) {
+		Scanner reader = new Scanner(System.in);// Para pedir un dato numérico por teclado
+		int nota = 0;
+		String evaluacion = "";
+		System.out.print("Introduzca el valor de una calificación: ");
+		nota = reader.nextInt();
+			
+		if (nota >= 0 && nota < 5) {
+			evaluacion = "Suspenso";
+		}
+		else if (nota >= 5 && nota < 7) {
+			evaluacion = "Aprobado";
+		}
+		else if (nota >= 7 && nota <9) {
+			evaluacion = "Notable";
+		}
+		else if (nota >= 9 && nota <= 10) {
+			evaluacion = "Sobresaliente";
+		}
+		else {
+			evaluacion = "El valor de la calificación introducida no es correcta";
+		}
 
-if (n >= 0 && n < 5)
-c = "Suspenso";
-else if (n >= 5 && n < 7)
-c = "Aprobado";
-else if (n >= 7 && n <9)
-c = "Notable";
-else if (n >= 9 && n <= 10)
-c = "Sobresaliente";
-else
-c = "El valor de la calificación introducida no es correcta";
-
-System.out.println(c);
-reader.close();
-}
+		System.out.println(evaluacion);
+		reader.close();
+	}
 }
