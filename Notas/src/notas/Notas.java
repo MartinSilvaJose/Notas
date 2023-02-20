@@ -11,6 +11,18 @@ public class Notas {
 		System.out.print("Introduzca el valor de una calificación: ");
 		nota = reader.nextInt();
 			
+		evaluacion = cali(nota);
+
+		System.out.println(evaluacion);
+		reader.close();
+	}
+
+	/**
+	 * @param nota Un entero que introducimos en el metodo para que nos muestre el grado de evaluación.
+	 * @return Un String que nos indicara el grado de la evaluación 
+	 */
+	public static String cali(int nota) {
+		String evaluacion;
 		if (nota >= 0 && nota < 5) {
 			evaluacion = "Suspenso";
 		}
@@ -26,8 +38,6 @@ public class Notas {
 		else {
 			evaluacion = "El valor de la calificación introducida no es correcta";
 		}
-
-		System.out.println(evaluacion);
-		reader.close();
+		return evaluacion;
 	}
 }
